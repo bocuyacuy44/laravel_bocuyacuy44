@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+@php $isLogin = request()->routeIs('login'); @endphp
+@unless($isLogin)
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="{{ route('dashboard') }}">Aplikasi RS</a>
@@ -21,6 +23,7 @@
         </div>
     </div>
     </nav>
+@endunless
 
 <main class="py-4">
     <div class="container">

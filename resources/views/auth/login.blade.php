@@ -4,7 +4,9 @@
 <div class="row justify-content-center">
     <div class="col-md-5">
         <div class="card shadow-sm">
-            <div class="card-header">Login</div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Login</span>
+            </div>
             <div class="card-body">
                 <form method="POST" action="{{ route('login.perform') }}">
                     @csrf
@@ -22,10 +24,7 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" name="remember" id="remember" class="form-check-input">
-                        <label class="form-check-label" for="remember">Remember me</label>
-                    </div>
+                    
                     <div class="d-grid">
                         <button type="submit" class="btn btn-primary">Masuk</button>
                     </div>
